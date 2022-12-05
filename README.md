@@ -1,1 +1,1 @@
-# rsschool-cv
+https://TheWindBLR.github.io/rsschool-cv/
