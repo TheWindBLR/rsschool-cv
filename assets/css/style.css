@@ -1,21 +1,48 @@
+:root {
+    --max-width: 1440px;
+    --content-width: 1300px;
+    --text: white;
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 html {
     scroll-behavior: smooth;
 }
-
-/*----comman----*/
-
-.background {
+body {
     width: 100%;
-    height: 1150px;
     background: #3a6186;
     background: -webkit-linear-gradient(to bottom left, #3a6186 0%, #666699 20%, #8E0E00 100%);
     background: linear-gradient(to bottom left, #3a6186 0%, #666699 20%, #8E0E00 100%);
+}
+
+li {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+/*----comman----*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 20px;
 }
 
 /*---- Section-1 ----*/
@@ -23,8 +50,34 @@ html {
 .header {
     width: 100%;
     height: 50px;
-    position: absolute;
     background: black;
+}
+
+.page-header__inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site_navigation {
+    display: flex;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.site-navigation__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text);
+    padding: 1rem 0;
+    position: relative;
 }
 
 /*---- Section-2 ----*/
@@ -32,8 +85,6 @@ html {
 .main {
     width: 100%;
     height: 1000px;
-    top: 50px;
-    position: absolute;
 }
 
 /*---- Section-3 ----*/
@@ -42,5 +93,4 @@ html {
     width: 100%;
     height: 100px;
     top: 1050px;
-    position: absolute;
 }
